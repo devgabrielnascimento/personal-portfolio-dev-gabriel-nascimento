@@ -7,7 +7,7 @@ Welcome to my personal portfolio! This project showcases my work as a web develo
 This portfolio is designed to be simple, responsive, and visually appealing. It includes sections such as:
 
 - **About Me** – A brief introduction and background
-- **Skills** – Technologies and tools I specialize in
+- **Skills** – Technologies and tools I specialize in - Building...
 - **Projects** – Highlights of my favorite and most impactful projects
 - **Contact** – Ways to get in touch with me
 
@@ -26,10 +26,10 @@ The main goal of this project is to present my experience, learnings, and accomp
 
 ```bash
 
-git clone https://github.com/yourusername/portfolio.git
-cd portfolio
-open index.html
+git clone https://github.com/devgabrielnascimento/personal-portfolio-dev-gabriel-nascimento
+cd personal-portfolio-dev-gabriel-nascimento
+open portfolio.html
 
 ```
 
-### Live Preview: You can check the running version of this portfolio at: https://devgabrielnascimento.netlify.app/
+Check the project at: [https://devgabrielnascimento.netlify.app/](https://devgabrielnascimento.netlify.app/)
