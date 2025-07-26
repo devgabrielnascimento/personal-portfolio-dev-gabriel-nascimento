@@ -363,6 +363,7 @@ body::-webkit-scrollbar {
   gap: 2px;
   width: 280px;
   height: auto;
+  
 }
 
 .project-container .project:hover {
@@ -740,6 +741,15 @@ aside {
 
   gap: 20px;
 }
+
+.desativated_area {
+  display: none;
+}
+
+.description {
+  height: 120px;
+}
+
 /* Responsividade */
 @media screen and (max-width: 800px) {
   svg.techs {
