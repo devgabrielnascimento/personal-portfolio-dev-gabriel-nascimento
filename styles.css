@@ -295,6 +295,7 @@ h4 {
   align-items: center;
   width: 100%;
   gap: 40px;
+  padding: 30px 25px;
 }
 
 .navbar-shadow {
@@ -302,7 +303,6 @@ h4 {
   transition: box-shadow 0.3s ease;
   background: linear-gradient(180deg, #3c2c61 0%, #8464e0 100%);
 }
-
 
 #scrollIndicator {
   position: fixed;
@@ -327,7 +327,7 @@ body::-webkit-scrollbar {
   flex-direction: row;
   display: flex;
   max-width: 800px;
-
+  
   align-items: center;
   justify-content: space-between;
   width: 100%;
@@ -478,6 +478,9 @@ svg:hover rect {
   justify-content: center;
   height: auto;
   gap: 20px;
+  width: 100%;
+  padding: 30px 25px;
+  margin: 100px;
 }
 
 .container-skills {
@@ -487,6 +490,7 @@ svg:hover rect {
   width: 100%;
   justify-content: center;
   align-items: center;
+  justify-items: center;
   max-width: 800px;
 }
 
@@ -709,7 +713,19 @@ svg:hover rect {
   font-weight: 200;
 }
 
+.about-me {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 800px;
+  width: 100%;
+  gap: 20px;
+}
+
 .why-work-with-me {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   max-width: 800px;
   width: 100%;
   gap: 20px;
@@ -918,5 +934,13 @@ footer {
 
   .container-skills {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project-container {
+    gap: 40px;
+  }
+
+  .section_about h3 {
+    font-size: 18px;
   }
 }
