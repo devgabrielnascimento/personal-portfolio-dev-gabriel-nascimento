@@ -327,7 +327,7 @@ body::-webkit-scrollbar {
   flex-direction: row;
   display: flex;
   max-width: 800px;
-  
+
   align-items: center;
   justify-content: space-between;
   width: 100%;
@@ -363,7 +363,6 @@ body::-webkit-scrollbar {
   gap: 2px;
   width: 280px;
   height: auto;
-  
 }
 
 .project-container .project:hover {
@@ -404,11 +403,6 @@ body::-webkit-scrollbar {
   height: 100%;
 }
 
-.folder {
-  pointer-events: none;
-}
-
-
 .folder-hover {
   position: absolute;
   top: 0;
@@ -436,9 +430,14 @@ body::-webkit-scrollbar {
   font-weight: bold;
   visibility: hidden;
   opacity: 0;
- pointer-events: none;
+ 
   transition: opacity 0.3s ease-in-out;
 }
+
+
+
+
+
 
 .clickable_area svg:hover path {
   fill: white;
@@ -476,6 +475,16 @@ svg:hover rect {
 
 .svg-wrapper:hover .folder {
   visibility: hidden;
+}
+
+.folder-hover,
+.clickable_area {
+  pointer-events: none; 
+}
+
+.svg-wrapper:hover .folder-hover,
+.svg-wrapper:hover .clickable_area {
+  pointer-events: auto; 
 }
 
 .section_skills {
