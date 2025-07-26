@@ -294,7 +294,6 @@ h4 {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  min-height: 100vh;
   gap: 40px;
 }
 
@@ -304,13 +303,6 @@ h4 {
   background: linear-gradient(180deg, #3c2c61 0%, #8464e0 100%);
 }
 
-.section_skills {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  height: 100vh;
-}
 
 #scrollIndicator {
   position: fixed;
@@ -484,9 +476,9 @@ svg:hover rect {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 80vh;
+  gap: 20px;
 }
-
 
 .container-skills {
   display: grid;
@@ -505,7 +497,7 @@ svg:hover rect {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease;
   width: 100%;
-max-width: 150px;
+  max-width: 150px;
   background: var(--deep-violet);
   height: auto;
   justify-items: flex-start;
@@ -587,45 +579,46 @@ max-width: 150px;
   fill: rgb(207, 255, 245);
   cursor: url("assets/images/cursor_actived.svg"), auto;
   transition: 0.3s ease-in-out;
-  filter: none;}
+  filter: none;
+}
 
 .card-skills:hover > #figma-icon path:nth-of-type(1) {
-  fill: #F4511E;
+  fill: #f4511e;
   cursor: url("assets/images/cursor_actived.svg"), auto;
   transition: 0.3s ease-in-out;
   filter: none;
 }
 
 .card-skills:hover > #figma-icon path:nth-of-type(2) {
-  fill: #FF8A65;
+  fill: #ff8a65;
   cursor: url("assets/images/cursor_actived.svg"), auto;
   transition: 0.3s ease-in-out;
   filter: none;
 }
 
 .card-skills:hover > #figma-icon path:nth-of-type(3) {
-  fill: #29B6F6;
+  fill: #29b6f6;
   cursor: url("assets/images/cursor_actived.svg"), auto;
   transition: 0.3s ease-in-out;
   filter: none;
 }
 
 .card-skills:hover > #figma-icon path:nth-of-type(4) {
-  fill: #7C4DFF;
+  fill: #7c4dff;
   cursor: url("assets/images/cursor_actived.svg"), auto;
   transition: 0.3s ease-in-out;
   filter: none;
 }
 
 .card-skills:hover > #figma-icon path:nth-of-type(5) {
-  fill: #00E676;
+  fill: #00e676;
   cursor: url("assets/images/cursor_actived.svg"), auto;
   transition: 0.3s ease-in-out;
   filter: none;
 }
 
 .card-skills:hover > #tailwind-icon path {
-  fill: #44A8B3;
+  fill: #44a8b3;
   cursor: url("assets/images/cursor_actived.svg"), auto;
   transition: 0.3s ease-in-out;
   filter: none;
@@ -638,14 +631,12 @@ max-width: 150px;
   filter: none;
 }
 
-
 .card-skills:hover > #typescript-icon path:nth-of-type(2) {
-  fill: #007ACC;
+  fill: #007acc;
   cursor: url("assets/images/cursor_actived.svg"), auto;
   transition: 0.3s ease-in-out;
   filter: none;
 }
-
 
 .card-skills:hover {
   transition: 0.3s ease-in-out;
@@ -769,7 +760,7 @@ aside {
   }
 
   .container-skills {
-     grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 .photo_info {
@@ -925,6 +916,6 @@ footer {
   }
 
   .container-skills {
-     grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
