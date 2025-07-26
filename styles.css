@@ -404,6 +404,11 @@ body::-webkit-scrollbar {
   height: 100%;
 }
 
+.folder {
+  pointer-events: none;
+}
+
+
 .folder-hover {
   position: absolute;
   top: 0;
