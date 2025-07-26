@@ -4700,7 +4700,7 @@
       <h2>Meus Projetos</h2>
       <div class="project-container">
         <div class="card-project">
-          <div class="svg-wrapper" onclick="toggleHover(event)">
+          <div class="svg-wrapper" onclick="handleClick(event, this)">
             <div class="folder">
               <svg
                 width="261"
@@ -6164,14 +6164,42 @@
         scrollIndicator.style.height = scrollPercent + "%";
       });
 
-      let isActive = false;
+      let lastClicked = null;
 
-      function toggleHover(event) {
-        if (!isActive) {
-          event.preventDefault(); 
-          isActive = true;
+      function handleClick(e, wrapper) {
+        if (lastClicked !== wrapper) {
+          e.preventDefault();
+          lastClicked = wrapper;
+
+          document.querySelectorAll(".svg-wrapper").forEach((w) => {
+            w.classList.remove("show-hover");
+          });
+          wrapper.classList.add("show-hover");
+        } else {
+          lastClicked = null;
         }
       }
+
+      
+      function abrir(e) {
+        e.stopPropagation();
+        // Aqui vai a lógica real
+      }
+
+      function editar(e) {
+        e.stopPropagation();
+        // Aqui vai a lógica real
+      }
+
+
+      document.addEventListener("click", (e) => {
+        if (!e.target.closest(".svg-wrapper")) {
+          document.querySelectorAll(".svg-wrapper").forEach((w) => {
+            w.classList.remove("show-hover");
+          });
+          lastClicked = null;
+        }
+      });
     </script>
     <footer><p>All rights reserved - Gabriel Nascimento da Silva</p></footer>
   </body>
