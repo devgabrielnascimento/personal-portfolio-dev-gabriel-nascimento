@@ -788,7 +788,10 @@ aside {
   .project-container {
     flex-wrap: wrap;
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
+    gap: 50px
   }
 
   .about {
@@ -806,8 +809,13 @@ aside {
   }
 
   .container-skills {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
+
+  .section_about h3{
+    font-size: 30px;
+  }
+ 
 }
 .photo_info {
   gap: 35px;
