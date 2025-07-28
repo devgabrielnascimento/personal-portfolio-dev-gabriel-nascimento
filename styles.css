@@ -1085,10 +1085,7 @@ footer {
     cursor: url("assets/images/cursor_actived.svg"), auto;
   }
 
-  .hamburger:hover span {
-    background-color: #aaa;
-    transition: background-color 0.3s ease;
-  }
+  
 
   .side-menu {
     position: fixed;
