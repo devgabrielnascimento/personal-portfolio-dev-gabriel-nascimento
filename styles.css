@@ -7,7 +7,6 @@
   font-style: normal;
   color: white;
   scrollbar-width: none;
-
   cursor: url("assets/images/cursor_fill.svg"), auto;
   scroll-behavior: smooth;
   ::selection {
@@ -53,6 +52,11 @@
 }
 a {
   text-decoration: none;
+}
+
+li {
+  cursor: url("assets/images/cursor_actived.svg"), pointer;
+  transition: color 0.3s ease;
 }
 a:hover,
 .btn-project:hover {
@@ -105,6 +109,7 @@ section {
   align-items: center;
   gap: 35px;
 }
+
 ul {
   list-style: none;
   display: flex;
@@ -113,24 +118,35 @@ ul {
   gap: 50px;
 }
 
-ul li {
+.second > ul > li {
+  font-weight: 300;
+  color: white;
   font-size: 14px;
+}
+
+.nav-container li {
   font-weight: 300;
   color: white;
 }
 
-nav li a {
+.nav-container li a {
   position: relative;
   text-decoration: none;
   color: #fff;
-  font-size: 12px;
-  font-weight: 500;
   transition: color 0.3s ease;
 }
-nav li a:hover {
-  color: white;
-}
 
+nav li a::before {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 4px;
+  background-color: var(--lavender-purple);
+  border-radius: 10px;
+  bottom: -5px;
+
+  transition: width 0.5s ease, left 0.5s ease;
+}
 nav li a::before {
   content: "";
   position: absolute;
@@ -149,15 +165,58 @@ nav li a:hover::before {
 .second svg:hover path,
 .second svg:hover,
 .second svg:hover rect,
-.second a:hover {
+.second svg:hover circle,
+.second svg:hover g,
+.second svg:hover defs,
+.second svg:hover clipPath,
+.menu-button > a:hover {
   fill: white;
   background: rgba(154, 150, 161, 0.4);
   border-radius: 100%;
   cursor: url("assets/images/cursor_actived.svg"), auto;
 }
 
+.side-menu a {
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.side-menu a::before {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 4px;
+  background-color: var(--lavender-purple);
+  border-radius: 10px;
+  bottom: -5px;
+
+  transition: width 0.5s ease, left 0.5s ease;
+}
+
+.side-menu a:hover::before {
+  width: 100%;
+}
+
+.side-menu ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+}
+
+.side-menu ul li {
+  font-weight: 300;
+  color: white;
+}
+
 svg {
   vertical-align: middle;
+  
 }
 
 .nav-container svg:hover,
@@ -252,59 +311,53 @@ svg {
   height: 69px;
   padding: 20px 20px;
   user-select: none;
- 
 }
-
-
 
 .btn-project::before {
   content: "";
   position: absolute;
-  top: 0; 
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   height: 0;
   width: 0;
   background: linear-gradient(
-            90deg,
-            #ff6ec4,
-            #fcb045,
-            #ffe53b,
-            #42e695,
-            #2fd3eb,
-            #6a82fb,
-            #d86bff
-          );
+    90deg,
+    #ff6ec4,
+    #fcb045,
+    #ffe53b,
+    #42e695,
+    #2fd3eb,
+    #6a82fb,
+    #d86bff
+  );
   transition: 400ms ease all;
   background-position: left center;
+  cursor: url("assets/images/cursor_actived.svg"), auto;
 }
 
 .btn-project::after {
   content: "";
   position: absolute;
-  bottom: 0; 
+  bottom: 0;
   left: 0;
-height: 0;
- right: 0;
+  height: 0;
+  right: 0;
   width: 0;
   background: linear-gradient(
-            90deg,
-            #ff6ec4,
-            #fcb045,
-            #ffe53b,
-            #42e695,
-            #2fd3eb,
-            #6a82fb,
-            #d86bff
-          );
+    90deg,
+    #ff6ec4,
+    #fcb045,
+    #ffe53b,
+    #42e695,
+    #2fd3eb,
+    #6a82fb,
+    #d86bff
+  );
   transition: 400ms ease all;
-  
+  cursor: url("assets/images/cursor_actived.svg"), auto;
 }
-
-
-
-
 
 .btn-project .v-left,
 .btn-project .v-right {
@@ -316,29 +369,26 @@ height: 0;
   width: 0;
   height: 0;
   background: linear-gradient(
-            90deg,
-            #ff6ec4,
-            #fcb045,
-            #ffe53b,
-            #42e695,
-            #2fd3eb,
-            #6a82fb,
-            #d86bff
-          );
+    90deg,
+    #ff6ec4,
+    #fcb045,
+    #ffe53b,
+    #42e695,
+    #2fd3eb,
+    #6a82fb,
+    #d86bff
+  );
   transition: 400ms ease all;
-  
+  cursor: url("assets/images/cursor_actived.svg"), auto;
 }
 
 .btn-project .v-left {
-  
   left: 0;
 }
 
 .btn-project .v-right {
-  
   right: 0;
 }
-
 
 .btn-project:hover::before,
 .btn-project:hover::after {
@@ -346,9 +396,7 @@ height: 0;
   background-size: 400%;
   transition: 800ms ease all;
   animation: animate-border 4s linear infinite;
-  
 }
-
 
 .btn-project::before,
 .btn-project::after {
@@ -356,30 +404,22 @@ height: 0;
   background-size: 300%;
   transition: 800ms ease all;
   animation: animate-border 4s linear 5ms 2;
-  
 }
 
 .btn-project .v-left,
 .btn-project .v-right {
-
   height: 100%;
   transition: 800ms ease all;
-   animation: animate-border 4s linear 5ms 2;
-   background-size: 400%;
+  animation: animate-border 4s linear 5ms 2;
+  background-size: 400%;
 }
-
-
-
-
-
 
 .btn-project:hover .v-left,
 .btn-project:hover .v-right {
-
   height: 100%;
   transition: 800ms ease all;
-   animation: animate-border 4s linear infinite;
-   background-size: 100%;
+  animation: animate-border 4s linear infinite;
+  background-size: 100%;
 }
 
 .btn-project:active {
@@ -394,26 +434,22 @@ height: 0;
   transition: 1.4s ease-out;
 }
 
-
 @keyframes animate-border {
   0% {
     background-position: 400% center;
     opacity: 0.6;
-    
   }
   80% {
     background-position: 400% center;
     opacity: 0;
     width: 100%;
     height: 100%;
-
   }
   100% {
     width: 0;
     opacity: 0;
   }
 }
-
 
 h4 {
   margin: 500px;
@@ -1028,18 +1064,33 @@ footer {
 
   .hamburger {
     display: flex;
+    width: 25px;
+    height: 20px;
+    display: flex;
     flex-direction: column;
     gap: 5px;
-    cursor: pointer;
+    cursor: url("assets/images/cursor_actived.svg"), auto;
+    
   }
 
   .hamburger span {
-    width: 25px;
+    width: 30px;
     height: 2px;
     background: var(--lavender-purple);
     border-radius: 2px;
     transition: 0.3s;
+    cursor: url("assets/images/cursor_actived.svg"), auto;
+    transition: transform 0.3s ease, opacity 0.3s ease;
     transform-origin: center;
+  }
+
+  .hamburguer:hover {
+    cursor: url("assets/images/cursor_actived.svg"), auto;
+  }
+
+  .hamburger:hover span {
+    background-color: #aaa;
+    transition: background-color 0.3s ease;
   }
 
   .side-menu {
@@ -1067,14 +1118,18 @@ footer {
   }
 
   .menu-toggle:checked + .hamburger span:nth-child(1) {
-    transform: rotate(45deg) translate(4.5px, 4.5px);
+    transform: rotate(45deg) translate(6px, 5.5px);
+     transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: center;
     transform-origin: center;
   }
   .menu-toggle:checked + .hamburger span:nth-child(2) {
     opacity: 0;
   }
   .menu-toggle:checked + .hamburger span:nth-child(3) {
-    transform: rotate(-45deg) translate(4.5px, -4.5px);
+    transform: rotate(-45deg) translate(4px, -4.5px);
+     transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: center;
   }
   .nav-list {
     display: none;
