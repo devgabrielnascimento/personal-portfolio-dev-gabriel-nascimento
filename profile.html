@@ -159,16 +159,16 @@
         </div>
       </nav>
     </header>
-    <section class="container_info fade-in">
+    <section class="container_info">
       <div class="photo_info">
         <div>
-          <h3 id="textProjects">Desenvolvendo projetos</h3>
-          <h3 id="textResponsive">dinâmicos<span> e </span>responsivos</h3>
-          <img src="assets/images/photo_devgabriel.png" alt="Foto de perfil" />
+          <h3 id="textProjects" class="fade-in">Desenvolvendo projetos</h3>
+          <h3 id="textResponsive" class=" fade-in">dinâmicos<span> e </span>responsivos</h3>
+          <img src="assets/images/photo_devgabriel.png" class="fade-in" alt="Foto de perfil" />
         </div>
 
         <svg
-          class="techs"
+          class="techs  fade-in"
           width="350"
           height="229"
           viewBox="0 0 350 229"
@@ -4687,18 +4687,18 @@
         </svg>
       </div>
       <div class="available">
-        <svg width="30" height="30" viewBox="0 0 30 30">
+        <svg width="30" height="30" viewBox="0 0 30 30"  class=" fade-in">
           <circle class="pulse" cx="15" cy="15" r="4" fill="#61F91A" />
           <circle class="glow" cx="15" cy="15" r="7" fill="#61F91A" />
         </svg>
-        <p>Disponível para projetos</p>
+        <p class= fade-in>Disponível para projetos</p>
       </div>
 
-      <div class="button_info">
+      <div class="button_info  ">
         <a href="#projects"
-          ><button class="btn-project">
-            ver projetos<span class="v-left"></span>
-            <span class="v-right"></span>
+          ><button class="btn-project fade-in">
+            ver projetos<span class="v-left fade-in"></span>
+            <span class="v-right fade-in"></span>
           </button>
         </a>
       </div>
@@ -6214,7 +6214,7 @@
       }
     });
   }, {
-    threshold: 0.6
+    threshold: 0.55
   });
 
   document.querySelectorAll('.fade-in').forEach(el => {

@@ -403,7 +403,7 @@ svg {
   width: 0%;
   background-size: 300%;
   transition: 800ms ease all;
-  animation: animate-border 4s linear 5ms 2;
+  animation: animate-border 4s linear 5ms 6;
 }
 
 .btn-project .v-left,
@@ -934,16 +934,43 @@ aside {
   animation: fadeInUp 1s ease forwards;
 }
 
- .project-container .fade-in:nth-child(1) {
-  animation-delay: 0.9s;
-}
 
-.project-container .fade-in:nth-child(2) {
+.container_info .fade-in:nth-child(1) {
+  animation-delay: 0.3s;
+}
+.container_info .fade-in:nth-child(2) {
+  animation-delay: 0.7s;
+}
+.container_info .fade-in:nth-child(3) {
   animation-delay: 1.2s;
 }
 
-.project-container  .fade-in:nth-child(3) {
+.container_info .fade-in:nth-child(4) {
   animation-delay: 1.5s;
+}
+
+.available .fade-in:nth-child(1) {
+  animation-delay: 1.8s;
+}
+.available .fade-in:nth-child(2) {
+  animation-delay: 2s;
+}
+
+.button_info .fade-in:nth-child(1) {
+  animation-delay: 2.1s;
+}
+
+
+ .project-container .fade-in:nth-child(1) {
+  animation-delay: 0.5s;
+}
+
+.project-container .fade-in:nth-child(2) {
+  animation-delay: 0.7s;
+}
+
+.project-container  .fade-in:nth-child(3) {
+  animation-delay: 0.9s;
 }
 
 
