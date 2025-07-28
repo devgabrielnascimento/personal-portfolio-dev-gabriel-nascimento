@@ -917,6 +917,116 @@ aside {
   height: 120px;
 }
 
+.fade-in {
+    opacity: 0;
+  }
+
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+  .fade-in.show {
+  animation: fadeInUp 1s ease forwards;
+}
+
+ .project-container .fade-in:nth-child(1) {
+  animation-delay: 0.9s;
+}
+
+.project-container .fade-in:nth-child(2) {
+  animation-delay: 1.2s;
+}
+
+.project-container  .fade-in:nth-child(3) {
+  animation-delay: 1.5s;
+}
+
+
+.container-skills .fade-in:nth-child(1) {
+  animation-delay: 0.9s;
+}
+
+.container-skills .fade-in:nth-child(2) {
+  animation-delay: 1.2s;
+}
+
+.container-skills .fade-in:nth-child(3) {
+  animation-delay: 1.5s;
+}
+
+.container-skills .fade-in:nth-child(4) {
+  animation-delay: 1.8s;
+}
+
+.container-skills .fade-in:nth-child(5) {
+  animation-delay: 2.1s;
+}
+
+.container-skills .fade-in:nth-child(6) {
+  animation-delay: 2.4s;
+}
+
+.container-skills .fade-in:nth-child(7) {
+  animation-delay: 2.7s;
+}
+
+.container-skills .fade-in:nth-child(8) {
+  animation-delay: 3s;
+}
+
+.about .fade-in:nth-child(1) {
+  animation-delay: 0.9s;
+}
+.about-me .fade-in:nth-child(1) {
+  animation-delay: 1.2s;
+}
+
+
+.about-me-text .fade-in:nth-child(1) {
+  animation-delay: 1.2s;
+}
+
+.about-me-text .fade-in:nth-child(2) {
+  animation-delay: 1.8s;
+}
+
+.about-me-text .fade-in:nth-child(3) {
+  animation-delay: 2.1s;
+}
+
+.why-work-with-me .fade-in:nth-child(1) {
+  animation-delay: 2.5s;
+}
+.why-work-with-me .fade-in:nth-child(2) {
+  animation-delay: 2.8s;
+}
+.why-work-with-me .fade-in:nth-child(3) {
+  animation-delay: 3.2s;
+}
+
+.why-work-with-me .fade-in:nth-child(4) {
+  animation-delay: 3.5s;
+}
+
+.why-work-with-me .fade-in:nth-child(5) {
+  animation-delay: 3.8s;
+}
+
+.aside-icons .fade-in:nth-child(1) {
+  animation-delay: 4.1s;
+}
+.aside-icons .fade-in:nth-child(2) {
+  animation-delay: 4.4s;
+}
+.aside-icons .fade-in:nth-child(3) {
+  animation-delay: 4.7s;
+}
+
 /* Responsividade */
 @media screen and (max-width: 800px) {
   svg.techs {

@@ -159,7 +159,7 @@
         </div>
       </nav>
     </header>
-    <section class="container_info">
+    <section class="container_info fade-in">
       <div class="photo_info">
         <div>
           <h3 id="textProjects">Desenvolvendo projetos</h3>
@@ -4707,7 +4707,7 @@
     <section class="section_projects" id="projects">
       <h2>Meus Projetos</h2>
       <div class="project-container">
-        <div class="card-project">
+        <div class="card-project fade-in">
           <div class="svg-wrapper" onclick="handleClick(event, this)">
             <div class="folder">
               <svg
@@ -4961,7 +4961,7 @@
             </svg>
           </div>
         </div>
-        <div class="card-project">
+        <div class="card-project fade-in">
           <div class="svg-wrapper">
             <div class="folder">
               <svg
@@ -5131,7 +5131,7 @@
             </svg>
           </div>
         </div>
-        <div class="card-project">
+        <div class="card-project fade-in">
           <div class="svg-wrapper">
             <div class="folder">
               <svg
@@ -5487,7 +5487,7 @@
     <section class="section_skills" id="skills">
       <h2>Minhas Skills</h2>
       <div class="container-skills">
-        <div class="card-skills">
+        <div class="card-skills fade-in">
           <svg
             id="javascript-icon"
             width="88"
@@ -5549,7 +5549,7 @@
             <p>Intermediate</p>
           </div>
         </div>
-        <div class="card-skills">
+        <div class="card-skills fade-in">
           <svg
             id="react-icon"
             width="88"
@@ -5609,7 +5609,7 @@
             <p>Intermediate</p>
           </div>
         </div>
-        <div class="card-skills">
+        <div class="card-skills fade-in">
           <svg
             id="java-icon"
             width="88"
@@ -5685,7 +5685,7 @@
             <p>Intermediate</p>
           </div>
         </div>
-        <div class="card-skills">
+        <div class="card-skills fade-in">
           <svg
             id="spring-icon"
             width="88"
@@ -5755,7 +5755,7 @@
             <p>Intermediate</p>
           </div>
         </div>
-        <div class="card-skills">
+        <div class="card-skills fade-in">
           <svg
             id="sql-icon"
             width="88"
@@ -5815,7 +5815,7 @@
             <p>Advanced</p>
           </div>
         </div>
-        <div class="card-skills">
+        <div class="card-skills fade-in">
           <svg
             id="figma-icon"
             width="88"
@@ -5891,7 +5891,7 @@
             <p>Intermediate</p>
           </div>
         </div>
-        <div class="card-skills">
+        <div class="card-skills fade-in">
           <svg
             id="tailwind-icon"
             width="88"
@@ -5951,7 +5951,7 @@
             <p>Intermediate</p>
           </div>
         </div>
-        <div class="card-skills">
+        <div class="card-skills fade-in">
           <svg
             id="typescript-icon"
             width="88"
@@ -6029,30 +6029,30 @@
     </section>
 
     <section class="section_about" id="about">
-      <div class="about">
+      <div class="about fade-in">
         <div>
           <img
             src="assets/images/photo_devgabriel.png"
             alt="my profile picture"
           />
         </div>
-        <div class="about-me">
+        <div class="about-me fade-in">
           <h3>Sobre mim</h3>
-          <div>
-            <p>
+          <div class="about-me-text">
+            <p class="fade-in">
               Olá, meu nome é Gabriel Nascimento, tenho 26 anos e recentemente
               concluí minha graduação em ADS (Análise e Desenvolvimento de
               Sistemas).
             </p>
 
-            <p>
+            <p class="fade-in">
               Desde a adolescência, sempre fui fascinado pelo mundo da
               tecnologia — especialmente pela área de desenvolvimento de
               software e pela forma como é possível solucionar problemas por
               meio de aplicações.
             </p>
 
-            <p>
+            <p class="fade-in">
               Atualmente, estou em busca da minha primeira oportunidade
               profissional na área de tecnologia, motivado a contribuir e
               aprender cada vez mais nesse universo que tanto me inspira.
@@ -6061,19 +6061,19 @@
         </div>
       </div>
       <div class="why-work-with-me">
-        <h3>Por que trabalhar comigo?</h3>
+        <h3 class="fade-in">Por que trabalhar comigo?</h3>
         <div>
-          <p>Sou uma pessoa proativa com disposição para aprender.</p>
-          <p>
+          <p class="fade-in">Sou uma pessoa proativa com disposição para aprender.</p>
+          <p class="fade-in">
             Flexível a mudanças e retenho muito bem feedbacks para melhorar
             constantemente!
           </p>
-          <p>Gostaria de trabalhar comigo?</p>
-          <p>Me contate:</p>
+          <p class="fade-in">Gostaria de trabalhar comigo?</p>
+          <p class="fade-in">Me contate:</p>
         </div>
 
-        <aside>
-          <a
+        <aside class="aside-icons">
+          <a class="fade-in"
             href="https://www.linkedin.com/in/devgabrielnascimento"
             target="_blank"
           >
@@ -6092,7 +6092,7 @@
                 fill="white"
               /></svg
           ></a>
-          <a
+          <a class="fade-in"
             href="https://www.instagram.com/devgabrielnascimento"
             target="_blank"
           >
@@ -6129,7 +6129,7 @@
                 </clipPath>
               </defs></svg
           ></a>
-          <a href="https://www.github.com/devgabrielnascimento" target="_blank"
+          <a href="https://www.github.com/devgabrielnascimento" target="_blank" class="fade-in"
             ><svg
               width="33"
               height="32"
@@ -6204,6 +6204,24 @@
           lastClicked = null;
         }
       });
+
+        const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        // Desconecta depois de ativar (opcional)
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.6
+  });
+
+  document.querySelectorAll('.fade-in').forEach(el => {
+    observer.observe(el);
+  });
+
+
     </script>
     <footer><p>All rights reserved - Gabriel Nascimento da Silva</p></footer>
   </body>
