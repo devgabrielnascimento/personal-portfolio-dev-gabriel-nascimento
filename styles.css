@@ -252,38 +252,168 @@ svg {
   height: 69px;
   padding: 20px 20px;
   user-select: none;
+ 
 }
 
-.btn-filled:hover {
-  background-color: rgba(138, 100, 224, 0.4);
-  box-shadow: none;
+
+
+.btn-project::before {
+  content: "";
+  position: absolute;
+  top: 0; 
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 0;
+  width: 0;
+  background: linear-gradient(
+            90deg,
+            #ff6ec4,
+            #fcb045,
+            #ffe53b,
+            #42e695,
+            #2fd3eb,
+            #6a82fb,
+            #d86bff
+          );
+  transition: 400ms ease all;
+  background-position: left center;
 }
 
-.btn-project:before,
-.btn-project:after {
+.btn-project::after {
+  content: "";
+  position: absolute;
+  bottom: 0; 
+  left: 0;
+height: 0;
+ right: 0;
+  width: 0;
+  background: linear-gradient(
+            90deg,
+            #ff6ec4,
+            #fcb045,
+            #ffe53b,
+            #42e695,
+            #2fd3eb,
+            #6a82fb,
+            #d86bff
+          );
+  transition: 400ms ease all;
+  
+}
+
+
+
+
+
+.btn-project .v-left,
+.btn-project .v-right {
+  height: 0%;
   content: "";
   position: absolute;
   top: 0;
-  right: 0;
-  height: 2px;
-  width: 0;
-  background: white;
-
-  transition: 400ms ease all;
-}
-
-.btn-project:after {
-  right: inherit;
-  top: inherit;
-  left: 0;
   bottom: 0;
+  width: 0;
+  height: 0;
+  background: linear-gradient(
+            90deg,
+            #ff6ec4,
+            #fcb045,
+            #ffe53b,
+            #42e695,
+            #2fd3eb,
+            #6a82fb,
+            #d86bff
+          );
+  transition: 400ms ease all;
+  
 }
 
-.btn-project:hover:before,
-.btn-project:hover:after {
-  width: 100%;
-  transition: 800ms ease all;
+.btn-project .v-left {
+  
+  left: 0;
 }
+
+.btn-project .v-right {
+  
+  right: 0;
+}
+
+
+.btn-project:hover::before,
+.btn-project:hover::after {
+  width: 100%;
+  background-size: 400%;
+  transition: 800ms ease all;
+  animation: animate-border 4s linear infinite;
+  
+}
+
+
+.btn-project::before,
+.btn-project::after {
+  width: 0%;
+  background-size: 300%;
+  transition: 800ms ease all;
+  animation: animate-border 4s linear 5ms 2;
+  
+}
+
+.btn-project .v-left,
+.btn-project .v-right {
+
+  height: 100%;
+  transition: 800ms ease all;
+   animation: animate-border 4s linear 5ms 2;
+   background-size: 400%;
+}
+
+
+
+
+
+
+.btn-project:hover .v-left,
+.btn-project:hover .v-right {
+
+  height: 100%;
+  transition: 800ms ease all;
+   animation: animate-border 4s linear infinite;
+   background-size: 100%;
+}
+
+.btn-project:active {
+  background-color: rgba(138, 100, 224, 0.4);
+  box-shadow: none;
+  transition: 1.4s ease-out;
+}
+
+.btn-project:hover {
+  background-color: rgba(138, 100, 224, 0.4);
+  box-shadow: none;
+  transition: 1.4s ease-out;
+}
+
+
+@keyframes animate-border {
+  0% {
+    background-position: 400% center;
+    opacity: 0.6;
+    
+  }
+  80% {
+    background-position: 400% center;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+
+  }
+  100% {
+    width: 0;
+    opacity: 0;
+  }
+}
+
 
 h4 {
   margin: 500px;
@@ -430,14 +560,9 @@ body::-webkit-scrollbar {
   font-weight: bold;
   visibility: hidden;
   opacity: 0;
- 
+
   transition: opacity 0.3s ease-in-out;
 }
-
-
-
-
-
 
 .clickable_area svg:hover path {
   fill: white;
@@ -479,12 +604,12 @@ svg:hover rect {
 
 .folder-hover,
 .clickable_area {
-  pointer-events: none; 
+  pointer-events: none;
 }
 
 .svg-wrapper:hover .folder-hover,
 .svg-wrapper:hover .clickable_area {
-  pointer-events: auto; 
+  pointer-events: auto;
 }
 
 .section_skills {
@@ -526,14 +651,6 @@ svg:hover rect {
   cursor: pointer;
   cursor: url("assets/images/cursor_actived.svg"), auto;
 }
-
-/* #javascript-icon:hover path {
-  fill: yellow;
-  background: red;
-  cursor: url("assets/images/cursor_actived.svg"), auto;
-  transition: 0.3s ease-in-out;
-  scale: 1.1;
-} */
 
 .card-skills:hover > svg rect {
   fill: var(--deep-violet);
@@ -712,8 +829,6 @@ svg:hover rect {
   width: 100%;
 }
 
-
-
 .section_about h3 {
   font-weight: bold;
   color: white;
@@ -793,7 +908,7 @@ aside {
     justify-content: center;
     align-items: center;
     width: 100%;
-    gap: 50px
+    gap: 50px;
   }
 
   .about {
@@ -803,7 +918,6 @@ aside {
     justify-content: space-between;
     align-items: center;
     word-wrap: break-word;
-    
   }
 
   .about-me {
@@ -814,10 +928,9 @@ aside {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .section_about h3{
+  .section_about h3 {
     font-size: 30px;
   }
- 
 }
 .photo_info {
   gap: 35px;

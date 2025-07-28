@@ -4691,8 +4691,10 @@
 
       <div class="button_info">
         <a href="#projects"
-          ><button class="btn-project">ver projetos</button></a
+          ><button class="btn-project">ver projetos<span class="v-left"></span>
+        <span class="v-right"></span></button> </a
         >
+       
       </div>
     </section>
 
@@ -6180,7 +6182,6 @@
         }
       }
 
-      
       function abrir(e) {
         e.stopPropagation();
       }
@@ -6188,7 +6189,6 @@
       function editar(e) {
         e.stopPropagation();
       }
-
 
       document.addEventListener("click", (e) => {
         if (!e.target.closest(".svg-wrapper")) {
