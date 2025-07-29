@@ -216,7 +216,6 @@ nav li a:hover::before {
 
 svg {
   vertical-align: middle;
-  
 }
 
 .nav-container svg:hover,
@@ -888,6 +887,12 @@ svg:hover rect {
   text-align: justify;
 }
 
+  .about-me-text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
 .why-work-with-me {
   display: flex;
   flex-direction: column;
@@ -918,9 +923,8 @@ aside {
 }
 
 .fade-in {
-    opacity: 0;
-  }
-
+  opacity: 0;
+}
 
 @keyframes fadeInUp {
   to {
@@ -929,11 +933,9 @@ aside {
   }
 }
 
-
-  .fade-in.show {
+.fade-in.show {
   animation: fadeInUp 1s ease forwards;
 }
-
 
 .container_info .fade-in:nth-child(1) {
   animation-delay: 0.3s;
@@ -960,8 +962,7 @@ aside {
   animation-delay: 2.1s;
 }
 
-
- .project-container .fade-in:nth-child(1) {
+.project-container .fade-in:nth-child(1) {
   animation-delay: 0.5s;
 }
 
@@ -969,10 +970,9 @@ aside {
   animation-delay: 0.7s;
 }
 
-.project-container  .fade-in:nth-child(3) {
+.project-container .fade-in:nth-child(3) {
   animation-delay: 0.9s;
 }
-
 
 .container-skills .fade-in:nth-child(1) {
   animation-delay: 0.9s;
@@ -1012,7 +1012,6 @@ aside {
 .about-me .fade-in:nth-child(1) {
   animation-delay: 1.2s;
 }
-
 
 .about-me-text .fade-in:nth-child(1) {
   animation-delay: 1.2s;
@@ -1097,6 +1096,8 @@ aside {
     align-items: center;
   }
 
+
+
   .container-skills {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -1160,7 +1161,6 @@ footer {
   display: none;
 }
 
-
 .menu-button {
   display: flex;
 }
@@ -1204,7 +1204,6 @@ footer {
     flex-direction: column;
     gap: 5px;
     cursor: url("assets/images/cursor_actived.svg"), auto;
-    
   }
 
   .hamburger span {
@@ -1221,8 +1220,6 @@ footer {
   .hamburguer:hover {
     cursor: url("assets/images/cursor_actived.svg"), auto;
   }
-
-  
 
   .side-menu {
     position: fixed;
@@ -1252,8 +1249,8 @@ footer {
 
   .menu-toggle:checked + .hamburger span:nth-child(1) {
     transform: rotate(45deg) translate(6px, 5.5px);
-     transition: transform 0.3s ease, opacity 0.3s ease;
-  transform-origin: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center;
     transform-origin: center;
   }
   .menu-toggle:checked + .hamburger span:nth-child(2) {
@@ -1261,8 +1258,8 @@ footer {
   }
   .menu-toggle:checked + .hamburger span:nth-child(3) {
     transform: rotate(-45deg) translate(4px, -4.5px);
-     transition: transform 0.3s ease, opacity 0.3s ease;
-  transform-origin: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center;
   }
   .nav-list {
     display: none;
