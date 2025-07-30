@@ -6152,77 +6152,9 @@
         </aside>
       </div>
     </section>
-    <script>
-      const navbar = document.querySelector(".flex-container");
-
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 50) {
-          navbar.classList.add("navbar-shadow");
-        } else {
-          navbar.classList.remove("navbar-shadow");
-        }
-      });
-
-      window.addEventListener("scroll", () => {
-        const scrollIndicator = document.getElementById("scrollIndicator");
-        const scrollTop = window.scrollY;
-        const docHeight =
-          document.documentElement.scrollHeight - window.innerHeight;
-        const scrollPercent = (scrollTop / docHeight) * 100;
-        scrollIndicator.style.height = scrollPercent + "%";
-      });
-
-      let lastClicked = null;
-
-      function handleClick(e, wrapper) {
-        if (lastClicked !== wrapper) {
-          e.preventDefault();
-          lastClicked = wrapper;
-
-          document.querySelectorAll(".svg-wrapper").forEach((w) => {
-            w.classList.remove("show-hover");
-          });
-          wrapper.classList.add("show-hover");
-        } else {
-          lastClicked = null;
-        }
-      }
-
-      function abrir(e) {
-        e.stopPropagation();
-      }
-
-      function editar(e) {
-        e.stopPropagation();
-      }
-
-      document.addEventListener("click", (e) => {
-        if (!e.target.closest(".svg-wrapper")) {
-          document.querySelectorAll(".svg-wrapper").forEach((w) => {
-            w.classList.remove("show-hover");
-          });
-          lastClicked = null;
-        }
-      });
-
-        const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-        // Desconecta depois de ativar (opcional)
-        observer.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold: 0.55
-  });
-
-  document.querySelectorAll('.fade-in').forEach(el => {
-    observer.observe(el);
-  });
-
-
-    </script>
     <footer><p>All rights reserved - Gabriel Nascimento da Silva</p></footer>
+  <script src="assets/js/scroll-design.js"></script>
+  <script src="assets/js/folder-hover.js"></script>
+  <script src="assets/js/fade-in.js"></script>
   </body>
 </html>
