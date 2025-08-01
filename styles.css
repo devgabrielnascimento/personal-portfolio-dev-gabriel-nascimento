@@ -241,6 +241,37 @@ svg {
   font-size: 80px;
   font-weight: 700;
   color: white;
+  vertical-align: middle;
+}
+
+.my-name svg {
+  width: 20px;
+  height: 20px;
+  margin: 4px;
+}
+
+.my-name svg path {
+  animation: translateToUp infinite 5s ease-in-out;
+}
+
+@keyframes translateToUp {
+  0% {
+
+    opacity: 0.9;
+   
+    fill: #f96c1a;
+  }
+
+  50% {
+
+    opacity: 0.9;
+    fill: #86f91a91;
+  }
+  100% {
+
+    opacity: 0.9;
+    fill: #1ad0f9;
+  }
 }
 
 .photo h2 {
@@ -266,19 +297,24 @@ svg {
   width: 100%;
 }
 
-  .typed-cursor {
+.typed-cursor {
   display: none;
 }
 
-  .custom-cursor {
+.custom-cursor {
   animation: blink 2s infinite;
   height: 30px;
   vertical-align: middle;
 }
 
 @keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 
 .photo_info > img {
@@ -925,11 +961,11 @@ svg:hover rect {
   text-align: justify;
 }
 
-  .about-me-text {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
+.about-me-text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
 
 .why-work-with-me {
   display: flex;
@@ -1101,12 +1137,12 @@ aside {
     width: 100%;
     max-width: 280px;
   }
-.photo h2 {
-  font-size: 20px;
-}
-.photo h3 {
-  font-size: 16px;
-}
+  .photo h2 {
+    font-size: 20px;
+  }
+  .photo h3 {
+    font-size: 16px;
+  }
   .container_info {
     width: 100%;
   }
@@ -1139,8 +1175,6 @@ aside {
   .about-me {
     align-items: center;
   }
-
-
 
   .container-skills {
     grid-template-columns: repeat(4, 1fr);
@@ -1235,8 +1269,6 @@ footer {
     width: 100%;
     padding: 60px 25px;
   }
-
-
 
   .available {
     width: 100%;
