@@ -229,12 +229,35 @@ svg {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 30px 25px;
+  padding: 180px 25px;
   width: 100%;
   height: 100vh;
   gap: 20px;
 }
 
+.my-name {
+  font-family: "Montserrat", sans-serif;
+  font-style: bold;
+  font-size: 80px;
+  font-weight: 700;
+  color: white;
+}
+
+.photo h2 {
+  font-family: "Montserrat", sans-serif;
+  font-style: bold;
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+}
+
+.photo h3 {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
+}
 .photo_info {
   display: flex;
   max-width: 800px;
@@ -243,7 +266,22 @@ svg {
   width: 100%;
 }
 
-.photo_info img {
+  .typed-cursor {
+  display: none;
+}
+
+  .custom-cursor {
+  animation: blink 2s infinite;
+  height: 30px;
+  vertical-align: middle;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.photo_info > img {
   max-width: 250px;
 }
 
@@ -1061,8 +1099,14 @@ aside {
 
   .techs {
     width: 100%;
+    max-width: 280px;
   }
-
+.photo h2 {
+  font-size: 20px;
+}
+.photo h3 {
+  font-size: 16px;
+}
   .container_info {
     width: 100%;
   }
@@ -1175,17 +1219,24 @@ footer {
   }
 
   .techs {
-    display: none;
+    display: flex;
   }
 
-  .photo_info img {
+  .photo h2 {
+    font-size: 25px;
+  }
+
+  .photo_info > img {
     width: 100%;
     max-width: 350px;
   }
 
   .container_info {
     width: 100%;
+    padding: 60px 25px;
   }
+
+
 
   .available {
     width: 100%;
