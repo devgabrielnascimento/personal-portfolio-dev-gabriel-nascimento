@@ -86,7 +86,7 @@ body {
 
   width: 100%;
 
-  padding: 15px 25px;
+  padding: 15px 12px;
 }
 .nav-container {
   display: flex;
@@ -512,7 +512,7 @@ h4 {
   align-items: center;
   width: 100%;
   gap: 40px;
-  padding: 30px 25px;
+  padding: 30px 12px;
 }
 
 .navbar-shadow {
@@ -577,7 +577,7 @@ body::-webkit-scrollbar {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  gap: 2px;
+  gap: 10px;
   width: 280px;
   height: auto;
 }
@@ -707,7 +707,7 @@ svg:hover rect {
   height: auto;
   gap: 20px;
   width: 100%;
-  padding: 30px 25px;
+  padding: 30px 12px;
   margin: 100px;
 }
 
@@ -990,119 +990,119 @@ aside {
 }
 
 .container_info .fade-in:nth-child(1) {
-  animation-delay: 0.3s;
+  animation-delay: 250ms;
 }
 .container_info .fade-in:nth-child(2) {
-  animation-delay: 0.7s;
+  animation-delay: 250ms;
 }
 .container_info .fade-in:nth-child(3) {
-  animation-delay: 1.2s;
+  animation-delay:250ms;
 }
 
 .container_info .fade-in:nth-child(4) {
-  animation-delay: 1.5s;
+  animation-delay: 250ms;
 }
 
 .available .fade-in:nth-child(1) {
-  animation-delay: 1.8s;
+  animation-delay: 250ms;
 }
 .available .fade-in:nth-child(2) {
-  animation-delay: 2s;
+  animation-delay: 250ms;
 }
 
 .button_info .fade-in:nth-child(1) {
-  animation-delay: 2.1s;
+  animation-delay: 250ms;
 }
 
 .project-container .fade-in:nth-child(1) {
-  animation-delay: 0.5s;
+  animation-delay: 250ms;
 }
 
 .project-container .fade-in:nth-child(2) {
-  animation-delay: 0.7s;
+  animation-delay: 250ms;
 }
 
 .project-container .fade-in:nth-child(3) {
-  animation-delay: 0.9s;
+  animation-delay: 250ms;
 }
 
 .container-skills .fade-in:nth-child(1) {
-  animation-delay: 0.9s;
+  animation-delay:250ms;
 }
 
 .container-skills .fade-in:nth-child(2) {
-  animation-delay: 1.2s;
+  animation-delay: 250ms;
 }
 
 .container-skills .fade-in:nth-child(3) {
-  animation-delay: 1.5s;
+  animation-delay: 250ms;
 }
 
 .container-skills .fade-in:nth-child(4) {
-  animation-delay: 1.8s;
+  animation-delay: 250ms;
 }
 
 .container-skills .fade-in:nth-child(5) {
-  animation-delay: 2.1s;
+  animation-delay: 250ms;
 }
 
 .container-skills .fade-in:nth-child(6) {
-  animation-delay: 2.4s;
+  animation-delay: 250ms;
 }
 
 .container-skills .fade-in:nth-child(7) {
-  animation-delay: 2.7s;
+  animation-delay: 250ms;
 }
 
 .container-skills .fade-in:nth-child(8) {
-  animation-delay: 3s;
+  animation-delay: 250ms;
 }
 
 .about .fade-in:nth-child(1) {
-  animation-delay: 0.9s;
+  animation-delay:250ms;
 }
 .about-me .fade-in:nth-child(1) {
-  animation-delay: 1.2s;
+  animation-delay: 250ms;
 }
 
 .about-me-text .fade-in:nth-child(1) {
-  animation-delay: 1.2s;
+  animation-delay: 250ms;
 }
 
 .about-me-text .fade-in:nth-child(2) {
-  animation-delay: 1.8s;
+  animation-delay: 250ms;
 }
 
 .about-me-text .fade-in:nth-child(3) {
-  animation-delay: 2.1s;
+  animation-delay: 250ms;
 }
 
 .why-work-with-me .fade-in:nth-child(1) {
-  animation-delay: 2.5s;
+  animation-delay: 250ms;
 }
 .why-work-with-me .fade-in:nth-child(2) {
   animation-delay: 2.8s;
 }
 .why-work-with-me .fade-in:nth-child(3) {
-  animation-delay: 3.2s;
+  animation-delay: 250ms;
 }
 
 .why-work-with-me .fade-in:nth-child(4) {
-  animation-delay: 3.5s;
+  animation-delay: 250ms;
 }
 
 .why-work-with-me .fade-in:nth-child(5) {
-  animation-delay: 3.8s;
+  animation-delay: 250ms;
 }
 
 .aside-icons .fade-in:nth-child(1) {
-  animation-delay: 4.1s;
+  animation-delay: 250ms;
 }
 .aside-icons .fade-in:nth-child(2) {
-  animation-delay: 4.4s;
+  animation-delay: 250ms;
 }
 .aside-icons .fade-in:nth-child(3) {
-  animation-delay: 4.7s;
+  animation-delay: 250ms;
 }
 
 /* Responsividade */
@@ -1232,10 +1232,12 @@ footer {
 
   .techs {
     display: flex;
+    width: 100%;
+    max-width: 400px;
   }
 
   .photo h2 {
-    font-size: 25px;
+    font-size: 28px;
   }
 
   .photo_info > img {
@@ -1245,7 +1247,7 @@ footer {
 
   .container_info {
     width: 100%;
-    padding: 60px 25px;
+    padding: 60px 12px;
   }
 
   .available {
@@ -1254,6 +1256,38 @@ footer {
     justify-content: center;
     align-items: center;
   }
+
+  .folder svg {
+    width: 100%;
+    height: 100%;
+  }
+  .folder {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .folder-hover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+  }
+ 
+
+  .folder-hover img{
+    width: 100%;
+    height: 100%;
+
+  }
+
   /* Navbar */
 
   .hamburger {
@@ -1328,6 +1362,7 @@ footer {
   .project-container {
     flex-direction: column;
     display: flex;
+  
   }
 
   .container-skills {
