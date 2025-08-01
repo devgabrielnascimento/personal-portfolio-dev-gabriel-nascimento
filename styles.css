@@ -511,6 +511,7 @@ h4 {
   flex-direction: column;
   align-items: center;
   width: 100%;
+
   gap: 40px;
   padding: 30px 12px;
 }
@@ -544,7 +545,6 @@ body::-webkit-scrollbar {
   flex-direction: row;
   display: flex;
   max-width: 800px;
-
   align-items: center;
   justify-content: space-between;
   width: 100%;
@@ -1363,6 +1363,15 @@ footer {
     flex-direction: column;
     display: flex;
   
+  }
+.card-project {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .clickable_area {
+   top: 200px;
+    left: 200px;
   }
 
   .container-skills {
