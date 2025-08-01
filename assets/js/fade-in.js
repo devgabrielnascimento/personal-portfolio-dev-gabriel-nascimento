@@ -3,13 +3,13 @@ const observer = new IntersectionObserver(
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("show");
-        // Desconecta depois de ativar (opcional)
+      
         observer.unobserve(entry.target);
       }
     });
   },
   {
-    threshold: 0.55,
+    threshold: 0.70,
   }
 );
 
