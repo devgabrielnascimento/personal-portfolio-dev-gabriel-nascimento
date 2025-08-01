@@ -250,29 +250,7 @@ svg {
   margin: 4px;
 }
 
-.my-name svg path {
-  animation: translateToUp infinite 5s ease-in-out;
-}
 
-@keyframes translateToUp {
-  0% {
-
-    opacity: 0.9;
-   
-    fill: #f96c1a;
-  }
-
-  50% {
-
-    opacity: 0.9;
-    fill: #86f91a91;
-  }
-  100% {
-
-    opacity: 0.9;
-    fill: #1ad0f9;
-  }
-}
 
 .photo h2 {
   font-family: "Montserrat", sans-serif;
