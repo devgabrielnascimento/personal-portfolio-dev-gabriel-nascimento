@@ -1223,9 +1223,7 @@ aside {
     font-size: 30px;
   }
 }
-.photo_info {
-  gap: 35px;
-}
+
 
 .pulse {
   animation: pulse 1.5s infinite ease-in-out;
